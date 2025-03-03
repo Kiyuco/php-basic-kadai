@@ -12,14 +12,11 @@
       class Food {
         // プロパティの定義
         private $name;
-        public $price;
+        private $price;
 
         // メソッドの定義
-        public function set_price(int $price){
-          $this->price = $price;
-        }
-        public function show_price(){
-          echo $this->name . '<br>';
+         public function show_price(){
+          echo $this->price ;
         }
 
         // コンストラクタの定義
@@ -36,16 +33,12 @@
       class Animal{
          // プロパティの定義
         private $name;
-        public $height;
+        private $height;
         private $weight;
 
         // メソッドの定義
-        public function set_height(int $height){
-          $this->height = $height;
-
-          }
         public function show_height(){
-          echo $this->height . '<br>';
+          echo $this->height;
           }
 
         // コンストラクタの定義
@@ -71,10 +64,11 @@
         echo '<br>';
 
         // Foodクラスのメソッドにアクセスして出力
-        echo $food->price . '<br>'; 
+        $food->show_price(); 
+        echo '<br>';
 
         // Animalクラスのメソッドにアクセスして出力
-        echo $animal->height; 
+        $animal->show_height(); 
       ?>
     </p>
   </body>
